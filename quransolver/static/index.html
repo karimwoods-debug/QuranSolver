@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>QuranSolver</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri+Quran&family=Amiri:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <h1>QuranSolver</h1>
+      <p class="tagline">Reflect on what you are going through in the light of the Qur'an and authentic Sunnah.</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <form id="ask-form" class="ask">
+      <label for="problem">What's on your mind?</label>
+      <textarea id="problem" name="problem" rows="4" maxlength="2000" required
+        placeholder="For example: I keep worrying about my future and can't sleep."></textarea>
+      <div class="ask-row">
+        <span id="mode-badge" class="badge muted"></span>
+        <button type="submit" id="submit">Find guidance</button>
+      </div>
+    </form>
+
+    <div id="status" class="status" role="status" aria-live="polite"></div>
+    <section id="results" hidden></section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p><strong>This app is not a mufti.</strong> It shares texts for reflection and does not issue religious rulings.
+        For fiqh questions, consult a qualified scholar. For health, safety or mental-health concerns, please seek
+        professional help as well.</p>
+      <p>Only verses of the Qur'an and hadith graded authentic (Sahih/Hasan) are shown, and the text is always taken from the
+        database, never generated. <span id="sources-note"></span></p>
+    </div>
+  </footer>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
